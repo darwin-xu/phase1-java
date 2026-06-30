@@ -35,16 +35,21 @@ Phase 1 - Java Fundamentals
 │   ├── vscode.md        # VS Code IDE setup
 │   └── guide.md         # General setup guide
 │
-├── lesson/              # Lesson plans and materials
+├── lesson_plan/         # Curriculum and lesson plans
+│   └── phase-1/
+│       ├── local-phase-1.md
+│       ├── lesson-1/ ... lesson-6/
+│       └── local-phase-1-gap.md
 │
 ├── projects/            # Practical coding projects
-│   ├── lesson-1/        # Environment & introduction
-│   ├── lesson-2/        # Java basics (variables, operators, methods)
-│   ├── lesson-3/        # [Coming soon]
-│   ├── lesson-4/        # [Coming soon]
-│   └── lesson-5/        # [Coming soon]
+│   ├── lesson-1/        # First Java steps and basic workflow
+│   ├── lesson-3/        # Data types, variables, arrays, methods
+│   ├── lesson-4/        # If/else logic and loop practice
+│   ├── lesson-5/        # Errors and exception handling practice
+│   └── lesson-6/        # Debugging and systematic troubleshooting
 │
-└── [Curriculum documentation files]
+├── homework/            # Homework and practice submissions
+└── tools/               # Utility files/scripts
 ```
 
 ## Getting Started
@@ -59,12 +64,18 @@ Follow the preparation guides in order:
 4. [VS Code Setup](preparation/vscode.md) - Configure your IDE
 5. [General Guide](preparation/guide.md) - Additional setup help
 
-### 2. Start with Lesson 1
+### 2. Follow the Lesson Sequence
 
-Begin with the fundamentals:
-- Development environment setup
-- Introduction to Computer Science
-- Programming basics and your first program
+Phase 1 is organized as:
+
+1. Lesson 1 - Environment setup
+2. Lesson 2 - Basic computer knowledge
+3. Lesson 3 - Data types, variables, arrays
+4. Lesson 4 - If statements and while loops
+5. Lesson 5 - Errors and exceptions
+6. Lesson 6 - Debugging complex problems
+
+Lesson plans are in `lesson_plan/phase-1/lesson-*`, and coding examples are in `projects/lesson-*`.
 
 ## Key Lessons
 
@@ -73,17 +84,30 @@ Begin with the fundamentals:
 - Setting up your development tools
 - Writing and running your first Java program
 
-### Lesson 2: Java Fundamentals
-- Variables and data types (`VariableTypes.java`)
-- Operators and expressions (`OperatorsDemo.java`)
-- Methods and functions (`SimpleMethods.java`)
-- Object references (`ReferenceExample.java`)
-- Real-world practice with robot examples (`RobotStatus.java`)
-- Debugging buggy code (`BuggyProgram.java`)
-- Array fundamentals (`ArrayBasics.java`)
+### Lesson 2: Basic Computer Knowledge
+- Terminal fundamentals and safe command usage
+- File system navigation and operations
+- Basic Git and GitHub workflow habits
 
-### Lessons 3-5
-Coming soon - Building on fundamentals with more advanced topics
+### Lesson 3: Data Types, Variables, Arrays
+- Java primitive types and references
+- Variables, methods, and memory model
+- Array fundamentals and practice
+
+### Lesson 4: If Statements and While Loops
+- Boolean logic and comparison operators
+- Conditional branching (`if`, `else if`, `switch`)
+- Iteration with `while`, `for`, and related control flow
+
+### Lesson 5: Errors and Exceptions
+- Syntax vs runtime vs logic errors
+- Reading stack traces
+- Exception handling with `try/catch/finally`
+
+### Lesson 6: Debugging Complex Problems
+- Print debugging, logging, and breakpoints
+- Step-by-step debugging workflow
+- Multi-file and robotics debugging scenarios
 
 ## Course Characteristics
 
