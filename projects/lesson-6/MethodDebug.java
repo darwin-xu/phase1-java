@@ -1,25 +1,28 @@
 public class MethodDebug {
-    
-    static int calculateBonus(int salary) {
-        System.out.println("  [calculateBonus] Input: salary = " + salary);
-        
-        int bonus = salary / 10;
-        
-        System.out.println("  [calculateBonus] Calculated: bonus = " + bonus);
-        System.out.println("  [calculateBonus] Returning: " + bonus);
-        
-        return bonus;
+
+    static int calculateSafeStoppingDistance(int speedCmPerSecond) {
+        System.out.println("  [calculateSafeStoppingDistance] Input speed = " + speedCmPerSecond);
+
+        int brakingDistance = speedCmPerSecond / 4;
+        int reactionBuffer = 25;
+        int stoppingDistance = brakingDistance + reactionBuffer;
+
+        System.out.println("  [calculateSafeStoppingDistance] brakingDistance = " + brakingDistance);
+        System.out.println("  [calculateSafeStoppingDistance] reactionBuffer = " + reactionBuffer);
+        System.out.println("  [calculateSafeStoppingDistance] Returning = " + stoppingDistance);
+
+        return stoppingDistance;
     }
-    
+
     public static void main(String[] args) {
-        System.out.println("Starting program");
-        
-        int salary = 50000;
-        System.out.println("Main: salary = " + salary);
-        
-        int bonus = calculateBonus(salary);
-        
-        System.out.println("Main: bonus returned = " + bonus);
-        System.out.println("Total: " + (salary + bonus));
+        System.out.println("Starting approach planner");
+
+        int currentSpeed = 180;
+        System.out.println("Main: currentSpeed = " + currentSpeed);
+
+        int stoppingDistance = calculateSafeStoppingDistance(currentSpeed);
+
+        System.out.println("Main: stoppingDistance = " + stoppingDistance + " cm");
+        System.out.println("Slow down if obstacle is closer than " + stoppingDistance + " cm");
     }
 }

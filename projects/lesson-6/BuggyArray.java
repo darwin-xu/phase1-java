@@ -1,15 +1,18 @@
 public class BuggyArray {
     public static void main(String[] args) {
-        int[] scores = {85, 90, 78};
-        
-        // Try to find average
-        int sum = 0;
-        for (int i = 0; i < scores.length; i++) {
-            sum = sum + scores[i];
-            System.out.println("DEBUG: i = " + i + ", scores[i] = " + scores[i] + ", sum = " + sum);
+        int[] distanceReadingsCm = {118, 121, 119, 122};
+
+        int totalDistance = 0;
+        for (int i = 0; i < distanceReadingsCm.length; i++) {
+            totalDistance = totalDistance + distanceReadingsCm[i];
+            System.out.println(
+                "DEBUG: sample = " + i
+                    + ", reading = " + distanceReadingsCm[i]
+                    + ", totalDistance = " + totalDistance
+            );
         }
-        
-        int average = sum / scores.length;
-        System.out.println("Average: " + average);
+
+        int averageDistance = totalDistance / distanceReadingsCm.length;
+        System.out.println("Average front distance: " + averageDistance + " cm");
     }
 }

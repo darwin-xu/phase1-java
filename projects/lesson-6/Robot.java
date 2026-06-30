@@ -1,13 +1,27 @@
 public class Robot {
-    Motor motor;
-    
+    Motor driveMotor;
+
     public Robot() {
         System.out.println("Creating robot...");
-        motor = new Motor();
+        driveMotor = new Motor();
     }
-    
-    public void move(int speed) {
-        System.out.println("Robot moving at speed " + speed);
-        motor.setSpeed(speed);
+
+    public void approachTarget(int frontDistanceCm) {
+        int requestedSpeed = chooseApproachSpeed(frontDistanceCm);
+
+        System.out.println("Robot sees target at " + frontDistanceCm + " cm");
+        System.out.println("Robot requesting speed " + requestedSpeed);
+
+        driveMotor.setSpeed(requestedSpeed);
+    }
+
+    private int chooseApproachSpeed(int frontDistanceCm) {
+        if (frontDistanceCm > 120) {
+            return 70;
+        }
+        if (frontDistanceCm > 60) {
+            return 35;
+        }
+        return 0;
     }
 }

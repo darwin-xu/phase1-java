@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class RobotStateMachine {
     
     enum State { IDLE, MOVING, AIMING, SHOOTING }
@@ -39,7 +37,7 @@ public class RobotStateMachine {
     }
     
     void log(String msg) {
-        System.out.println("[" + Thread.currentTimeMillis() % 10000 + "] " + msg);
+        System.out.println("[" + System.currentTimeMillis() % 10000 + "] " + msg);
     }
     
     public static void main(String[] args) {

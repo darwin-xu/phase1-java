@@ -1,31 +1,22 @@
 public class BuggyRobot2 {
     public static void main(String[] args) {
         int totalSteps = 0;
-        
-        // Right
-        for (int i = 0; i < 5; i++) {
-            totalSteps = totalSteps + 1;
+        String[] commands = {"RIGHT", "UP", "LEFT", "DOWN "};
+
+        for (String command : commands) {
+            if (command.equals("RIGHT")) {
+                totalSteps += 5;
+            } else if (command.equals("UP")) {
+                totalSteps += 5;
+            } else if (command.equals("LEFT")) {
+                totalSteps += 5;
+            } else if (command.equals("DOWN")) {
+                totalSteps += 5;
+            }
+
+            System.out.println("Processed command '" + command + "' => total: " + totalSteps);
         }
-        System.out.println("Right done. Total: " + totalSteps);
-        
-        // Up
-        for (int i = 0; i < 5; i++) {
-            totalSteps = totalSteps + 1;
-        }
-        System.out.println("Up done. Total: " + totalSteps);
-        
-        // Left - BUG HERE
-        for (int i = 0; i < 5; i++) {
-            totalSteps = totalSteps + 2;  // WRONG: adds 2 each time
-        }
-        System.out.println("Left done. Total: " + totalSteps);
-        
-        // Down
-        for (int i = 0; i < 5; i++) {
-            totalSteps = totalSteps + 1;
-        }
-        System.out.println("Down done. Total: " + totalSteps);
-        
+
         System.out.println("\nExpected: 20, Actual: " + totalSteps);
     }
 }

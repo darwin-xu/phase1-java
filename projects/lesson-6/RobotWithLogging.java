@@ -1,48 +1,58 @@
 public class RobotWithLogging {
-    
+
     static final boolean DEBUG = true;
-    
+
     static void log(String level, String message) {
         System.out.println("[" + level + "] " + message);
     }
-    
+
     static void debug(String message) {
-        if (DEBUG) log("DEBUG", message);
+        if (DEBUG) {
+            log("DEBUG", message);
+        }
     }
-    
-    static int readDistanceSensor() {
-        int distance = 150;
-        debug("Sensor read: " + distance + " cm");
+
+    static int readFrontDistance() {
+        int distance = 68;
+        debug("frontDistanceCm = " + distance);
         return distance;
     }
-    
-    static int calculateSpeed(int distance) {
-        debug("Calculating speed for distance: " + distance);
-        
-        int speed;
-        if (distance > 100) {
-            speed = 50;
-            debug("Distance > 100, setting speed to 50");
-        } else {
-            speed = 75;
-            debug("Distance <= 100, setting speed to 75");
+
+    static int readBatteryPercent() {
+        int batteryPercent = 28;
+        debug("batteryPercent = " + batteryPercent);
+        return batteryPercent;
+    }
+
+    static int calculateDrivePower(int distance, int batteryPercent) {
+        debug("Calculating drive power for distance=" + distance + ", battery=" + batteryPercent);
+
+        if (distance < 40) {
+            log("WARNING", "Obstacle too close, stopping robot");
+            return 0;
         }
-        
-        debug("Calculated speed: " + speed);
-        return speed;
+
+        if (batteryPercent < 30) {
+            log("WARNING", "Battery low, limiting drive power");
+            return 35;
+        }
+
+        return 60;
     }
-    
-    static void moveRobot(int speed) {
-        log("INFO", "Moving robot at speed " + speed);
+
+    static void moveRobot(int drivePower) {
+        log("INFO", "Commanding drive power " + drivePower + "%");
     }
-    
+
     public static void main(String[] args) {
         log("INFO", "Robot program started");
-        
-        int distance = readDistanceSensor();
-        int speed = calculateSpeed(distance);
-        moveRobot(speed);
-        
+
+        int distance = readFrontDistance();
+        int batteryPercent = readBatteryPercent();
+        int drivePower = calculateDrivePower(distance, batteryPercent);
+
+        moveRobot(drivePower);
+
         log("INFO", "Robot program finished");
     }
 }
