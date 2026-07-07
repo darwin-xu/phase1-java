@@ -38,7 +38,7 @@ Phase 1 - Java Fundamentals
 ├── lesson_plan/         # Curriculum and lesson plans
 │   └── phase-1/
 │       ├── local-phase-1.md
-│       ├── lesson-1/ ... lesson-6/
+│       ├── lesson-1/ ... lesson-7/
 │       └── local-phase-1-gap.md
 │
 ├── projects/            # Practical coding projects
@@ -46,7 +46,7 @@ Phase 1 - Java Fundamentals
 │   ├── lesson-3/        # Data types, variables, arrays, methods
 │   ├── lesson-4/        # If/else logic and loop practice
 │   ├── lesson-5/        # Errors and exception handling practice
-│   └── lesson-6/        # Debugging and systematic troubleshooting
+│   └── lesson-7/        # Debugging and systematic troubleshooting
 │
 ├── homework/            # Homework and practice submissions
 └── tools/               # Utility files/scripts
@@ -73,7 +73,7 @@ Phase 1 is organized as:
 3. Lesson 3 - Data types, variables, arrays
 4. Lesson 4 - If statements and while loops
 5. Lesson 5 - Errors and exceptions
-6. Lesson 6 - Debugging complex problems
+6. Lesson 7 - Debugging complex problems
 
 Lesson plans are in `lesson_plan/phase-1/lesson-*`, and coding examples are in `projects/lesson-*`.
 
@@ -104,7 +104,7 @@ Lesson plans are in `lesson_plan/phase-1/lesson-*`, and coding examples are in `
 - Reading stack traces
 - Exception handling with `try/catch/finally`
 
-### Lesson 6: Debugging Complex Problems
+### Lesson 7: Debugging Complex Problems
 - Print debugging, logging, and breakpoints
 - Step-by-step debugging workflow
 - Multi-file and robotics debugging scenarios
